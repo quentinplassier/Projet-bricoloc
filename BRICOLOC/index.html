@@ -765,7 +765,7 @@ function renderProposer(){
     <p class="err" id="pErr" hidden></p>
     <button class="btn pri" type="submit">Publier l'annonce</button>
   </form></div>
-  <aside class="box"><h3>Ce que vous gagnez</h3><div class="lines" id="pGain"></div><p class="note">Bricoloc prélève 20 % sur chaque location, contre 30 % chez la plupart des plateformes. Seuls votre prénom, l'initiale de votre nom et votre ville sont affichés.</p></aside></div>`;
+  <aside class="box"><h3>Ce que vous gagnez</h3><div class="lines" id="pGain"></div><p class="note">Seuls votre prénom, l'initiale de votre nom et votre ville sont affichés.</p></aside></div>`;
   const gain = () => { const p=+$("#pPrix").value||0; $("#pGain").innerHTML = `<div><span>Prix affiché / jour</span><span>${eur(p)}</span></div><div class="small muted"><span>Commission Bricoloc 20 %</span><span>− ${eur(p*COMMISSION)}</span></div><div class="tot"><span>Vous recevez / jour</span><span>${eur(p*(1-COMMISSION))}</span></div><div class="small muted"><span>4 locations de 2 jours / mois</span><span>${eur(p*(1-COMMISSION)*8)}</span></div>`; };
   gain(); $("#pPrix").addEventListener("input", gain);
   let photo = "";
